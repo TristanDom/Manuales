@@ -1,0 +1,38 @@
+Conexión por SSH:
+
+Conectar ssh
+Conexión por medio de SSH a otras terminales:
+
+1.- Descargar 
+En pc:
+	sudo apt install gedit
+	sudo apt-get install openssh-server
+
+En termux:
+	pkg upgrade (termux)
+	pkg install openssh (termux)
+	pkg install net-tools (averiguar IP) (termux)
+	pkg install procps (matar procesos) (termux)
+	pkg install nano (para editar archivos) (termux)
+
+	sshd (activar ssh en termux, cada que se vaya a conectar)
+	passwd (Configurar password)
+
+2.- Verificar IP y usuario de servidor.
+	Con el comando: 
+		ifconfig o ip addr show
+		Ej: 192.168.1.72
+
+	Saber usuario con comando :
+		whoami
+		Ej: trez
+
+3.- Conexión
+	Con el comando ↓
+	Sudo (root), Puerto (22), Usuario (Nombre del usuario de servidor) e IP (IP de servidor).
+		ssh -p <Puerto> <Usuario>@<IP> (de termux a pc).
+		sudo ssh <whoami>@<IP> -p 8022 (de pc a termux).
+
+Ej 1 De termux a computadora: ssh -p 22 ElTripas@192.168.1.77	
+Ej 2 De computadora a termux: sudo ssh u0_a302@192.168.1.70 -p 8022
+Ej 3 De termux a computadora: ssh -p 22 trez@192.168.1.72 
