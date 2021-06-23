@@ -1,0 +1,69 @@
+Instalación de paquetes.
+
+Instalar paquetes:
+En todos los tipos de paquetes se basan en dos principales pasos que es encontrar el paquete, así como su directorio para su posterior instalación:
+
+    1. Dirigirse al directorio donde se encuentra el paquete desde el terminal.
+        ◦ Para localizar el directorio hacer uso de comandos como
+            ▪ find
+            ▪ ls
+            ▪ cd
+            ▪ grep
+               
+    2. Localizar el paquete.
+        ◦ Para localizar el paquete hacer uso de comandos como:
+            ▪ ls
+              
+.:----------------------------------------------------------------------------------------:.
+
+paquetes.deb:
+
+    1. Instalación:
+        ◦ Digitar el comando:
+            ▪ sudo dpkg -i <<package_file>>.deb
+            ▪ sudo apt-get install <<package_file>>.deb
+            ▪ aptitude install <<package_file>>.deb
+              
+.:----------------------------------------------------------------------------------------:.
+
+paquetes tar.gz o tgz:
+       
+    • Instalación:
+        ◦ Digitar el comando para descomprimir el paquete:
+            ▪ tar –zxvf <<package_file>>.tar.gz
+            ▪ tar –zxvf <<package_file>>.tgz
+        ◦ Entrar al directorio del paquete descomprimido:
+            ▪ cd <<package_file>>./configure
+        ◦ Digitar:
+            ▪ make
+        ◦ Y finalizar instalación con:
+            ▪ make install
+		
+.:----------------------------------------------------------------------------------------:.
+      Paquetes tar:
+    • Extraer el paquete:
+        ◦ tar xvf <<package_file>>.tar
+            ▪ Para instalar el paquete se debe de leer el README dentro del paquete extraído
+          
+.:----------------------------------------------------------------------------------------:.
+Paquetes.rpm:
+    • Instalación:
+        ◦ Digitar el comando:
+            ▪ rpm –i <<package_file>>.rpm
+
+.:----------------------------------------------------------------------------------------:.
+Paquetes.run:
+    • Instalación:
+        ◦ Digitar el comando:
+            ▪ sh ./<<package_file>>.run
+
+.:----------------------------------------------------------------------------------------:.
+Paquetes.sh o paquetes.py:
+    • Instalación:
+        ◦ Digitar el comando:
+            ▪ sh nombre_script.sh
+            ▪ ./nombre_script.sh
+              
+.:----------------------------------------------------------------------------------------:.
+Fuentes:
+https://www.linuxadictos.com/tutorial-como-instalar-cualquier-paquete-en-gnulinux.html#RPM
