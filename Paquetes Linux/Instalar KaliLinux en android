@@ -1,0 +1,38 @@
+Instalar KaliLinux en android
+
+1.- Instalar termux desde playstore.
+
+2.- Instalar kali NetHunter App Store (F-Droid).
+
+3.- Instalar NetHunter Kex desde F-Droid.
+
+4.- Digitar en termux y conceder los permisos:
+	termux-setup-storage
+
+5.- Digitar en termux por segunda vez y aceptar las instalación:
+	termux-setup-storage
+
+6.- Digitar en termux y conceder los permisos:
+	pkg install wget
+
+7.- Digitar en termux y conceder los permisos:
+	wget -O install-nethunter-termux http://offs.ec/2MceZWr
+
+Consejo: Para digitar conocer el estado de lo instalado digitar en termux:
+	dir
+8.- Conceder los permisos a NetHunter:
+	chmod +x install-nethunter-termux
+
+Consejo: Para digitar conocer el estado de lo instalado digitar en termux y tiene que aparecer en color verde:
+	dir
+
+9.- Digitar en terminal de termux para instalar NetHunter:
+	./install-nethunter-termux
+
+10.- Se pueden guardar o eliminar los archivos descargados
+
+11.- Cambiar contraseña de NetHunter de mínimo 6 dígitos:
+	kex passwd
+
+12.- Digitar en termux para obtener datos de conexión:
+	kex
