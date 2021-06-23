@@ -1,0 +1,27 @@
+OSRFramework
+OSRFramework (https://github.com/i3visio/osrframework)
+
+Conjunto de bibliotecas GNU AGPLv3 + desarrollado por i3visio para realizar tareas de recopilación de inteligencia de código abierto. Incluyen referencias a un montón de aplicaciones diferentes relacionadas con la verificación de nombre de usuario, búsquedas de DNS, investigación de filtraciones de información, búsqueda profunda en la web, extracción de expresiones regulares y muchas otras. Al mismo tiempo, por medio de transformaciones ad-hoc de Maltego, OSRFramework proporciona una forma de hacer estas consultas gráficamente, así como varias interfaces para interactuar con OSRFConsole o una interfaz web.
+
+Instalación
+
+    Instalaciones previas.
+
+	sudo apt install python-pip
+	sudo apt install pip3
+	sudo apt install net-tools
+	sudo apt install procps
+	sudo apt install nano
+	sudo apt install python3-pip
+	
+    Instalación de OSFramework.
+	
+	sudo pip3 install osrframework
+	pip3 install osrframework –upgrade
+
+Uso básico.
+
+osrf --help
+usufy -n i3visio febrezo yrubiosec -p twitter facebook
+searchfy -q "i3visio"
+mailfy -n i3visio
