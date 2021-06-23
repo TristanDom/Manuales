@@ -1,0 +1,38 @@
+Listar todos los archivos del sistema.
+
+	dpkg –list  ó  sudo apt --installed list | more
+
+Desinstalar del sistema
+
+	sudo apt-get remove nombre-del-paquete
+
+Eliminar definitivamente
+
+	sudo apt-get purge nombre-paquete
+
+Eliminar todo registro de versiones anteriores de libre office.
+
+	sudo apt-get remove --purge libreoffice*
+	sudo apt-get clean
+	sudo apt-get autoremove
+
+Liga de página oficial de LibreOffice
+
+https://www.libreoffice.org/download/download/?type=deb-x86_64&version=7.0.0&lang=es
+
+Ubicarse en el directorio donde se descargó el archivo.
+Con éste comando se descomprimirá el archivo.
+
+	tar -xzvf LibreOffice_6.4.0_Linux*.tar.gz
+
+Cambia la ubicación del directorio
+	
+	cd LibreOffice_6.4.0_Linux_x86-64_deb
+
+Cambia de ubicación al directorio “DEBS”
+	
+	cd DEBS
+
+Instala todos los archivos “*.debs”
+
+	sudo dpkg -i *.deb
