@@ -1,0 +1,84 @@
+NETCAT
+Uso y conexión de NC.
+
+creada en 1995 por "El Hobbit" (hobbit@avian.org). La versión original fue desarrollada para sistemas Unix y Linux pero Weld Pond (weld@l0pht.com) desarrolló la versión para Windows NTen 1998. El código fuente de ambas versiones está disponible, no cuenta con interfaz gráfica.
+
+1.- Chat.
+2.- Enviar y recibir ficheros.
+3.- Escanear puertos.
+4.- Captura básica de banners.
+5.- Servidor Web.
+6.- Conseguir una shell (de forma directa o inversa).
+
+Instalación:
+	Sudo apt install netcat
+
+Instalación (termux):
+	pkg install netcat-openbsd
+
+CHAT: 
+
+ Modo cliente-servidor.
+ -n : Comando que indica a Netcat no hacer búsqueda de DNS.
+ -v : Nos permite visualizar los mensajes en la terminal.
+ -l  : Permite que Netcat este en modo escucha en el localhost, permitiendo la conexión de otros al host.
+ -p : Que puerto escuchar.
+ -u : Cambia TCP a UDP.
+ -o : Guarda la información en ficheros (-o <NombreDeFichero>).
+ 
+Modo Servidor:
+	El puerto debe de ser de preferencia mayor a 1024.
+	nc -n -v -l -p <Puerto>.
+
+Cliente: 
+	nc -n -v <IP> <PuertoDeServidor>.
+
+	Terminar sesión:
+	ctrl + c
+
+Ejemplo:
+	Servidor:
+	nc -n -v -l -p 5000
+	Cliente:
+	nc -n -v 192.168.1.72 5000
+		
+
+ENVIAR Y RECIBIR FICHEROS:
+
+	Servidor de escucha:
+		nc -l -p 5000
+
+		Se transfieren los archivos de cliente a servidor (Se mostrará el fichero de contraseña):
+
+		nc <ip_servidor> <puerto_servidor> < /etc/passwd
+		cat /etc/passwd | nc <ip_servidor> <puerto_servidor>
+
+Almacenar fichero:
+	nc -l -p 5000 > /home/loretahur/prueba
+
+/home/trez/Documentos/Personal/Manuales/Manuales/Informática/Por Tristán/InstalaciónDePaquetes.odt
+
+
+
+	nc -l -p <puerto> > <UbicaciónDelFichero> 
+	nc <ip> <Puerto> < <Ubicación>
+
+
+
+
+Aptitude 
+
+	Mejor manejo de archivos, repositorios y descargas que apt.
+
+    Instalación:
+
+		sudo apt-get install aptitude
+
+	History
+
+	Lista del historial de los comandos usados con anterioridad.
+
+	!<número>
+	Puedes usar nuevamente el número de comando usado escribiendo ! Seguido del 	número de comando en el historial.
+	!!
+	Ultimo comando usado en la lista del historial.
